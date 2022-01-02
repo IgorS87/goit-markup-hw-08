@@ -1,0 +1,11 @@
+.header {
+  margin: 0 auto;
+  width: 1600px;
+  border-bottom: 1px solid $border-header-color;
+  z-index: 1;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}

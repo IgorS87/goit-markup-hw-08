@@ -1,0 +1,40 @@
+.customer__list {
+  display: inline-flex;
+}
+.customer__item {
+  margin-right: 30px;
+  &:nth-child(6n) {
+    margin: 0px;
+  }
+}
+
+.customer__link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+
+  padding: 16px 32px;
+  border: 1px solid $color-icon;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms $timing-function;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    .customer__icon {
+      fill: $accent-color;
+    }
+  }
+}
+
+.customer__icon {
+  display: flex;
+  height: 60px;
+  width: 106px;
+  fill: $color-icon;
+  transition: fill 250ms $timing-function;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

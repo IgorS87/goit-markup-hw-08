@@ -1,0 +1,27 @@
+.address__link {
+  color: $secondary-color-transparenсy;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address {
+  display: block;
+  width: 231px;
+}
+
+.address__link--accent {
+  color: $primary-white-color;
+}
+
+.adress__list {
+  display: block;
+  .adress__item {
+    margin-bottom: 9px;
+    &:nth-last-child(-n + 1) {
+      margin-bottom: 0px;
+    }
+  }
+}
