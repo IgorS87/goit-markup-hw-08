@@ -17,6 +17,14 @@
   padding: 200px 0;
 }
 .hero__title {
+  font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // width: 696px;
+  font-size: 22px;
+  line-height: 1.62;
+  width: 320px;
+
   margin: 0 auto;
   margin-bottom: 30px;
   color: $primary-white-color;
@@ -24,10 +32,17 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  width: 696px;
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+    line-height: 1.62;
+    width: 360px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }
 
 .hero__button {

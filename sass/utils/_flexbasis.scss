@@ -1,0 +1,24 @@
+$type: calc(100% / 3 - 30px);
+@mixin flex-basis__3($type: calc(100% / 3 - 30px)) {
+  flex-basis: $type;
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
+}
+
+$type: flex-basis;
+@mixin flex-basis__2($type: flex-basis) {
+  flex-basis: $type;
+  flex-basis: calc(100% / 2 - 30px);
+
+  &:nth-child(2n) {
+    margin-right: 0px;
+  }
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
