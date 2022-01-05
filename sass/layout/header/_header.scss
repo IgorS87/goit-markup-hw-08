@@ -1,11 +1,36 @@
 .header {
-  margin: 0 auto;
-  width: 1600px;
+  background-color: $primary-white-color;
   border-bottom: 1px solid $border-header-color;
-  z-index: 1;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
 }
 
 .header__container {
+  min-width: 320px;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  max-width: 1170px;
+
+  overflow: hidden;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    min-height: 60px;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    min-height: 80px;
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }

@@ -11,8 +11,6 @@
 
 @import "./layout/header/header";
 @import "./layout/header/logo-header";
-@import "./layout/header/site-nav";
-@import "./layout/header/contacts";
 @import "./layout/hero";
 @import "./layout/features";
 @import "./layout/occupation";
@@ -23,3 +21,7 @@
 @import "./layout/footer/addres";
 @import "./layout/footer/social";
 @import "./layout/footer/footer-input";
+@import "./layout/mobile-menu/mob-menu";
+@import "./layout/mobile-menu/menu-navigation";
+@import "./layout/mobile-menu/menu-contacts";
+@import "./layout/mobile-menu/menu-social";

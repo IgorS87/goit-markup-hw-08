@@ -19,57 +19,148 @@
 
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-
+  <!--   header__container   -->
   <body>
-    <!-- 
-      <header class="header">
-      <div class="container header__container">
+    <header class="header">
+      <div class="header__container">
         <a href="./index.html" class="logo logo__header--accent">
           <span class="logo__web">Web</span>Studio
         </a>
-        <nav>
-          <ul class="site-nav__list">
-            <li class="site-nav__item">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#menu-open"></use>
+          </svg>
+        </button>
+
+        <!-- navigation -->
+
+        <div class="menu">
+          <nav>
+            <ul class="menu__list_navigation">
+              <li class="menu__item_navigation">
+                <a
+                  href="./index.html"
+                  class="menu__link menu__link_navigation menu__link_navigation--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu__item_navigation">
+                <a
+                  href="./portfolio.html"
+                  class="menu__link menu__link_navigation"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu__item_navigation">
+                <a href="" class="menu__link menu__link_navigation">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="menu__list_contacts">
+            <li class="menu__item_contacts">
               <a
-                href="index.html"
-                class="site-nav__link site-nav__link--current"
-                >Студия</a
+                href="tel:+380961111111"
+                class="menu__link menu__link_tel menu__link_contacts"
+              >
+                <svg class="menu__icon_contacts" width="10" height="16">
+                  <use
+                    href="./images/icons.svg#icon-head-smartphone"
+                  ></use></svg
+                >+38 096 111 11 11</a
               >
             </li>
-            <li class="site-nav__item">
-              <a href="portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
+            <li class="menu__item_contacts">
+              <a
+                href="mailto:info@devstudio.com"
+                class="menu__link menu__link_contacts menu__link_mail"
+              >
+                <svg class="menu__icon_contacts" width="16" height="12">
+                  <use href="./images/icons.svg#icon-head-email"></use></svg
+                >info@devstudio.com
+              </a>
             </li>
           </ul>
-        </nav>
-
-       
-
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contact__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-head-email"></use>
-              </svg>
-
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contact__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-head-smartphone"></use>
-              </svg>
-
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
-    </header> 
-   -->
+
+      <div class="menu__box js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-cross" />
+          </svg>
+        </button>
+
+        <div class="mobile-menu">
+          <nav>
+            <ul class="menu__list_navigation">
+              <li class="menu__item_navigation">
+                <a
+                  href="./index.html"
+                  class="menu__link menu__link_navigation menu__link_navigation--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu__item_navigation">
+                <a
+                  href="./portfolio.html"
+                  class="menu__link menu__link_navigation"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="menu__item_navigation">
+                <a href="" class="menu__link menu__link_navigation">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="menu__list_contacts">
+            <li class="menu__item_contacts">
+              <a
+                href="tel:+380961111111"
+                class="menu__link_tel menu__link_contacts"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu__item_contacts">
+              <a
+                href="mailto:info@devstudio.com"
+                class="menu__link menu__link_contacts menu__link_mail"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu__list_social">
+            <li class="menu__item_social">
+              <a href="" class="menu__link menu__link_social"
+                >Instagram<span class="menu__link_social--border"></span
+              ></a>
+            </li>
+            <li class="menu__item_social">
+              <a href="" class="menu__link menu__link_social"
+                >Twitter<span class="menu__link_social--border"></span
+              ></a>
+            </li>
+            <li class="menu__item_social">
+              <a href="" class="menu__link menu__link_social"
+                >Facebook<span class="menu__link_social--border"></span
+              ></a>
+            </li>
+            <li class="menu__item_social">
+              <a href="" class="menu__link menu__link_social">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+
+        <!------------------------------------- -->
+      </div>
+    </header>
 
     <main>
       <!-- Hero -->
@@ -264,19 +355,33 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="occupation__list">
             <li class="occupation__item">
-              <img src="./images/box1.jpg" alt="Leptop" width="370" />
+              <img
+                src="./images/box/work1.jpg"
+                srcset="./images/box/work1.jpg 1x, ./images/box/work1-2x.jpg 2x"
+                alt="Leptop"
+              />
               <div class="occupation__image_package">
                 <p class="occupation__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="occupation__item">
-              <img src="./images/box2.jpg" alt="Mobile" width="370" />
+              <img
+                src="./images/box/work2.jpg"
+                srcset="./images/box/work2.jpg 1x, ./images/box/work2-2x.jpg 2x"
+                alt="Mobile"
+                width="370"
+              />
               <div class="occupation__image_package">
                 <p class="occupation__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="occupation__item">
-              <img src="./images/box3.jpg" alt="Tablet" width="370" />
+              <img
+                src="./images/box/work3.jpg"
+                srcset="./images/box/work3.jpg 1x, ./images/box/work3-2x.jpg 2x"
+                alt="Tablet"
+                width="370"
+              />
               <div class="occupation__image_package">
                 <p class="occupation__text">Дизайнерские решения</p>
               </div>
@@ -292,12 +397,35 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__face"
-                src="./images/photo1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/member-one450x460.jpg 1x,
+                    ./images/team/member-one900x920.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    ./images/team/member-one354x374.jpg 1x,
+                    ./images/team/member-one708x748.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/member-one270x260.jpg 1x,
+                    ./images/team/member-one540x520.jpg 2x
+                  "
+                />
+                <img
+                  class="team__face"
+                  src="./images/team/member-one450x460.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
+
               <div class="team__members_profile">
                 <h3 class="team__members_title">Игорь Демьяненко</h3>
                 <p class="team__members_text">Product Designer</p>
@@ -334,12 +462,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__face"
-                src="./images/photo2.jpg"
-                alt="Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/member-two450x460.jpg 1x,
+                    ./images/team/member-two900x920.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    ./images/team/member-two354x374.jpg 1x,
+                    ./images/team/member-two708x748.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/member-two270x260.jpg 1x,
+                    ./images/team/member-two540x520.jpg 2x
+                  "
+                />
+                <img
+                  class="team__face"
+                  src="./images/team/member-two450x460.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="team__members_profile">
                 <h3 class="team__members_title">Ольга Репина</h3>
                 <p class="team__members_text">Frontend Developer</p>
@@ -376,12 +526,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__face"
-                src="./images/photo3.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/member-three450x460.jpg 1x,
+                    ./images/team/member-three900x920.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    ./images/team/member-three354x374.jpg 1x,
+                    ./images/team/member-three708x748.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/member-three270x260.jpg 1x,
+                    ./images/team/member-three540x520.jpg 2x
+                  "
+                />
+                <img
+                  class="team__face"
+                  src="./images/team/member-three450x460.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="team__members_profile">
                 <h3 class="team__members_title">Николай Тарасов</h3>
                 <p class="team__members_text">Marketing</p>
@@ -418,12 +590,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__face"
-                src="./images/photo4.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/member-four450x460.jpg 1x,
+                    ./images/team/member-four900x920.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    ./images/team/member-four354x374.jpg 1x,
+                    ./images/team/member-four708x748.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/member-four270x260.jpg 1x,
+                    ./images/team/member-four540x520.jpg 2x
+                  "
+                />
+                <img
+                  class="team__face"
+                  src="./images/team/member-four450x460.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="team__members_profile">
                 <h3 class="team__members_title">Михаил Ермаков</h3>
                 <p class="team__members_text">UI Designer</p>
@@ -612,6 +806,14 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

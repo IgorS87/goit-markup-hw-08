@@ -18,22 +18,34 @@
       transform: translate(-50%, -50%) scale(0);
     }
   }
+  @media screen and (max-width: 767px) {
+    padding: 43px 15px;
+  }
 }
 
 .modal {
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%) scale(1);
-  padding: 40px;
-  width: 528px;
-  min-height: 581px;
-
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: $primary-white-color;
-
   box-shadow: $shadow-modal;
-  border-radius: 4px;
   transition: transform 250ms $timing-function;
+  border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+    min-height: 609px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-width: 480px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 521px;
+    min-height: 581px;
+  }
 }
 
 .button__close {
@@ -52,10 +64,8 @@
   background: $primary-white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-
   cursor: pointer;
   transition: border 250ms $timing-function;
-
   &:hover,
   &:focus {
     border: 1px solid $accent-color;
@@ -65,20 +75,20 @@
 .icon__close {
   width: 18px;
   height: 18px;
-
   fill: $primary-text-color;
   transition: fill 250ms $timing-function;
-
   &:hover,
   &:focus {
     fill: $accent-color;
   }
 }
 
-.button__close:hover,
-.button__close:focus {
-  .icon__close {
-    fill: $accent-color;
+.button__close {
+  &:hover,
+  &:focus {
+    .icon__close {
+      fill: $accent-color;
+    }
   }
 }
 
@@ -86,13 +96,19 @@
 
 .modal__title {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.25;
-
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
-  margin-bottom: 12px;
 
+  margin-bottom: 12px;
   color: $primary-text-color;
+
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    line-height: 1.25;
+  }
 }
 
 .forma__list {
@@ -109,7 +125,6 @@
 
 .modal__label {
   display: block;
-
   text-align: left;
   font-size: 12px;
   line-height: 1.16;
@@ -128,7 +143,7 @@
   color: $primary-text-color;
   caret-color: $primary-text-color;
 
-  min-width: 448px;
+  width: 100%;
   height: 40px;
   padding: 0;
 
@@ -140,7 +155,6 @@
   &[type="text"],
   &[type="tel"],
   &[type="email"] {
-    padding-left: 42px;
     &:focus {
       border: 1px solid $accent-color;
       color: $primary-text-color;
@@ -169,7 +183,7 @@
 }
 
 .modal__textarea_comment {
-  width: 448px;
+  width: 100%;
   height: 120px;
 
   font-size: 16px;
@@ -198,12 +212,26 @@
 .modal__checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 10px;
+  line-height: 1.17;
+
   color: $secondary-color;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    margin-bottom: 31px;
+    font-size: 12px;
+    line-height: 1.17;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.71;
+    justify-content: center;
+  }
 }
 
 .modal__input_checkbox {
@@ -224,11 +252,16 @@
 .modal__icon_checkbox {
   width: 16px;
   height: 15px;
-
-  margin-right: 8.38px;
   border: 2px solid $primary-text-color;
   background-color: $primary-white-color;
   border-radius: 2px;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    margin-right: 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 8px;
+  }
 }
 
 .modal__policy_link {
@@ -240,10 +273,10 @@
   width: 200px;
   height: 50px;
   padding: 10px 55px;
-
   background-color: $accent-color;
   color: $primary-white-color;
   cursor: pointer;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;

@@ -10,10 +10,9 @@ $type: calc(100% / 3 - 30px);
   }
 }
 
-$type: flex-basis;
-@mixin flex-basis__2($type: flex-basis) {
+$type: calc(100% / 2 - 30px);
+@mixin flex-basis__2($type: calc(100% / 2 - 30px)) {
   flex-basis: $type;
-  flex-basis: calc(100% / 2 - 30px);
 
   &:nth-child(2n) {
     margin-right: 0px;
@@ -22,3 +21,11 @@ $type: flex-basis;
     margin-bottom: 0px;
   }
 }
+
+// flex-basis: calc(100% / 2 - 30px);
+// &:nth-child(2n) {
+//   margin-right: 0px;
+// }
+// &:nth-last-child(-n + 2) {
+//   margin-bottom: 0px;
+// }

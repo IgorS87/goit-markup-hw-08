@@ -5,7 +5,7 @@
   }
 }
 .feutures__item {
-  width: 100%;
+  // width: 100%;
   // margin-bottom: 30px;
   @media screen and(max-width: 767px) {
     &:not(:last-child) {
@@ -45,15 +45,15 @@
   background: $secondary-background-color;
   border-radius: 4px;
 
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 354px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-  }
+  // @media screen and (max-width: 767px) {
+  //   width: 100%;
+  // }
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: 354px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   width: 270px;
+  // }
 }
 .features__icon {
   width: 70px;
